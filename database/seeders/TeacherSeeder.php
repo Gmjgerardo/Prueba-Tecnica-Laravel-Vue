@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Direction;
+use App\Models\Subject;
 use App\Models\Teacher;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,8 +15,9 @@ class TeacherSeeder extends Seeder
      */
     public function run(): void
     {
-        Direction::factory(10)->for(
-            Teacher::factory(), 'relation'
-            )->create();
+        Teacher::factory(10)
+            ->has(Direction::factory(), 'direction')
+            ->has(Subject::factory())
+            ->create();
     }
 }

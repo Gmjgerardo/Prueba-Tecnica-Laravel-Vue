@@ -15,8 +15,8 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        Direction::factory(45)->for(
-            Student::factory(), 'relation'
-            )->create();
+        Student::factory(45)->has(
+            Direction::factory(), 'direction')
+            ->create();
     }
 }

@@ -1,0 +1,30 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "lint": "eslint resources/js --ext .js,.vue --ignore-path .gitignore --fix"
+    },
+    "devDependencies": {
+        "@inertiajs/vue3": "^2.0.0",
+        "@rushstack/eslint-patch": "^1.8.0",
+        "@tailwindcss/forms": "^0.5.3",
+        "@vitejs/plugin-vue": "^5.0.0",
+        "@vue/eslint-config-prettier": "^9.0.0",
+        "autoprefixer": "^10.4.12",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-vue": "^9.23.0",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.4.31",
+        "prettier": "^3.3.0",
+        "prettier-plugin-organize-imports": "^4.0.0",
+        "prettier-plugin-tailwindcss": "^0.6.5",
+        "tailwindcss": "^3.2.1",
+        "vite": "^6.0.11",
+        "vue": "^3.4.0"
+    },
+    "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
+}

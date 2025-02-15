@@ -9,6 +9,32 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class SubjectFactory extends Factory
 {
+    private $subjects = [
+        'Mathematics',
+        'Sciences',
+        'History',
+        'Physics',
+        'Biology',
+        'Chemistry',
+        'Spanish',
+        'English',
+        'Art',
+        'Sports',
+    ];
+
+    private $levels = [
+        'Elementary',
+        'Intermediate',
+        'Advanced',
+    ];
+
+    private function generateSubjectTitle() {
+        $nombre = $this->subjects[array_rand($this->subjects)];
+        $nivel = $this->levels[array_rand($this->levels)];
+
+        return $nombre.": ".$nivel;
+    }
+
     /**
      * Define the model's default state.
      *
@@ -17,7 +43,7 @@ class SubjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->title(),
+            'title' => $this->generateSubjectTitle(),
         ];
     }
 }
